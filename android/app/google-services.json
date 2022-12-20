@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "1071291420608",
+    "project_id": "shopbiz-fc741",
+    "storage_bucket": "shopbiz-fc741.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071291420608:android:3ce8df5cf31c12ff2a8225",
+        "android_client_info": {
+          "package_name": "com.example.reddit_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071291420608-vkd2jg8e3h7e8scll2pmkuqg9b9c0fp5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reddit_clone",
+            "certificate_hash": "83b262a76b4327d5abd7e3274eb3d75c1e2cc77d"
+          }
+        },
+        {
+          "client_id": "1071291420608-leard6if9nm5hmdt5d1qaq712qqvij65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASne1x0NIH6G_8gOc3fB_YZME46ohPW1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071291420608-leard6if9nm5hmdt5d1qaq712qqvij65.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1071291420608-1dhv2de4oo18a830rt6q11r78vr5l2a3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.redditClone"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071291420608:android:a72fb1b1de42838a2a8225",
+        "android_client_info": {
+          "package_name": "com.example.shopbiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071291420608-c05mt8j8r2msrmq7k0cvlo81e044h46q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shopbiz",
+            "certificate_hash": "83b262a76b4327d5abd7e3274eb3d75c1e2cc77d"
+          }
+        },
+        {
+          "client_id": "1071291420608-leard6if9nm5hmdt5d1qaq712qqvij65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASne1x0NIH6G_8gOc3fB_YZME46ohPW1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071291420608-leard6if9nm5hmdt5d1qaq712qqvij65.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1071291420608-1dhv2de4oo18a830rt6q11r78vr5l2a3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.redditClone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
