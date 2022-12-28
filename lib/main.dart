@@ -35,12 +35,13 @@ class _MyAppState extends ConsumerState<MyApp> {
         .watch(authControllerProvider.notifier)
         .getUserData(data.uid)
         .first;
-    ref.read(userProvider.notifier).update((state) => userModel);
-    setState(() {});
+    ref.watch(userProvider.notifier).update((state) => userModel);
+    // setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
+    print('build');
     return ref.watch(authStateChangeProvider).when(
         data: (data) => MaterialApp.router(
               debugShowCheckedModeBanner: false,
@@ -49,10 +50,11 @@ class _MyAppState extends ConsumerState<MyApp> {
               routerDelegate: RoutemasterDelegate(routesBuilder: (context) {
                 if (data != null) {
                   getData(ref, data);
-                  return loggedInRoute;
-                } else {
-                  return loggedOutRoute;
+                  if (userModel != null) {
+                    return loggedInRoute;
+                  }
                 }
+                return loggedOutRoute;
               }),
               routeInformationParser: const RoutemasterParser(),
             ),
