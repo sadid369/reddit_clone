@@ -35,8 +35,8 @@ class _MyAppState extends ConsumerState<MyApp> {
         .watch(authControllerProvider.notifier)
         .getUserData(data.uid)
         .first;
-    ref.watch(userProvider.notifier).update((state) => userModel);
-    // setState(() {});
+
+    ref.read(userProvider.notifier).update((state) => userModel);
   }
 
   @override
@@ -49,9 +49,10 @@ class _MyAppState extends ConsumerState<MyApp> {
               theme: Pallete.darkModeAppTheme,
               routerDelegate: RoutemasterDelegate(routesBuilder: (context) {
                 if (data != null) {
-                  getData(ref, data);
-                  if (userModel != null) {
+                  if (ref.watch(userProvider) != null) {
                     return loggedInRoute;
+                  } else {
+                    getData(ref, data);
                   }
                 }
                 return loggedOutRoute;
