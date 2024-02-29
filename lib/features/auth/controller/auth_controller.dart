@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reddit_clone/core/utils.dart';
@@ -10,6 +11,15 @@ final userProvider = StateProvider<UserModel?>((ref) {
 final authControllerProvider = StateNotifierProvider<AuthController, bool>(
     (ref) => AuthController(
         authRepository: ref.watch(authRepositoryProvider), ref: ref));
+final authStateChangeProvider = StreamProvider((ref) {
+  final authController = ref.watch(authControllerProvider.notifier);
+  return authController.authStateChange;
+});
+
+final getUserDataProvider = StreamProvider.family((ref, String uid) {
+  final authController = ref.watch(authControllerProvider.notifier);
+  return authController.getUserData(uid);
+});
 
 class AuthController extends StateNotifier<bool> {
   final Ref _ref;
@@ -18,6 +28,10 @@ class AuthController extends StateNotifier<bool> {
       : _authRepository = authRepository,
         _ref = ref,
         super(false);
+  Stream<User?> get authStateChange => _authRepository.authStateChange;
+  Stream<UserModel> getUserData(String uid) {
+    return _authRepository.getUserData(uid);
+  }
 
   void signInWithGoogle(BuildContext context) async {
     state = true;
