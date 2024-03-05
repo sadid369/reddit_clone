@@ -13,6 +13,7 @@ import 'package:reddit_clone/theme/pallete.dart';
 import 'package:routemaster/routemaster.dart';
 
 // 01400945313
+//01729559503
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
